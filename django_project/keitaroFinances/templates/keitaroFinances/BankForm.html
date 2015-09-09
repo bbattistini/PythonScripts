@@ -1,0 +1,13 @@
+<form action="/keitaroFinances/Bank/" method="post">
+	{% csrf_token %}
+	{{ form }}
+	<input type="submit" value="Submit" />
+</form>
+
+<select name="banks" id="ddlBanks">
+{% for bank in banks %}
+	<option value="{{bank.bank_ID}}">{{bank.bank_name}}</option>
+{% endfor %}
+</select>
+
+<label>ddlBanks.value</label> 
